@@ -4,13 +4,17 @@ var userList = [];
 var gameStarted = false;
 var level = 0;
 
-$(document).keypress(function() {
+$(document).click(function(e) {
   if(!gameStarted){
     $("#level-title").text("level "+level);
     nextPattern();
     gameStarted = true;
   }
 })
+
+// $("#container").click(function(e){
+//   alert("Don't click on buttons");
+// })
 
 $(".btn").click(function(){
   var userClickedColor = $(this).attr("id");
